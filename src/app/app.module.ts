@@ -4,9 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {StoreModule} from '@ngrx/store';
-import {MatRadioModule, MatSlideToggleModule} from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {reducer} from './store/state/app.reducer';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment';
+import {PokemonModule} from './pokemon/pokemon.module';
+import {EffectsModule} from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -16,10 +17,13 @@ import {reducer} from './store/state/app.reducer';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({}),
-    StoreModule.forFeature('theme', reducer),
-    MatSlideToggleModule,
-    BrowserAnimationsModule,
-    MatRadioModule,
+    StoreDevtoolsModule.instrument({
+      name: 'POKEMON demo app',
+      maxAge: 25,
+      logOnly: environment.production
+    }),
+    EffectsModule.forRoot([]),
+    PokemonModule
 
   ],
   providers: [],

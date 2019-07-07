@@ -1,0 +1,34 @@
+<ng-container *ngIf="selectedPokemon">
+  <h1>{{selectedPokemon.name | titlecase}} Details</h1>
+  <div class="pokemon-details">
+    <div class="box">
+      <h3>General</h3>
+      <p>Name: <span>{{selectedPokemon.name | titlecase}}</span></p>
+      <p>ID: <span>{{selectedPokemon.id}}</span></p>
+      <p>Weight: <span>{{selectedPokemon.weight}}</span></p>
+      <p>Height: <span>{{selectedPokemon.height}}</span></p>
+    </div>
+    <div class="box">
+      <h3>Combat Stats</h3>
+      <p>HP: <span>{{selectedPokemon.stats.hp}}</span></p>
+      <p>Defense: <span>{{selectedPokemon.stats.defense}}</span></p>
+      <p>Attack: <span>{{selectedPokemon.stats.attack}}</span></p>
+      <p>Speed: <span>{{selectedPokemon.stats.speed}}</span></p>
+      <p>Special Defense: <span>{{selectedPokemon.stats.specialDefense}}</span></p>
+      <p>Special Attack: <span>{{selectedPokemon.stats.specialAttack}}</span></p>
+    </div>
+    <div class="box full">
+      <h3>Sprites</h3>
+      <div class="img-box">
+        <h4>Normal</h4>
+        <img *ngIf="selectedPokemon.sprites.back_default" [src]="selectedPokemon.sprites.back_default" alt="back">
+        <img *ngIf="selectedPokemon.sprites.front_default" [src]="selectedPokemon.sprites.front_default" alt="front">
+      </div>
+      <div class="img-box">
+        <h4>Shiny</h4>
+        <img *ngIf="selectedPokemon.sprites.back_shiny" [src]="selectedPokemon.sprites.back_shiny" alt="back-shiny">
+        <img *ngIf="selectedPokemon.sprites.front_shiny" [src]="selectedPokemon.sprites.front_shiny" alt="front-shiny">
+      </div>
+    </div>
+  </div>
+</ng-container>

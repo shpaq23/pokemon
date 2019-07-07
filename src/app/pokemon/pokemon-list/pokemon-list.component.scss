@@ -1,0 +1,46 @@
+:host {
+  width: 48%;
+  display: inline;
+  float: left;
+  margin: 1%;
+}
+div.title {
+  display: inline;
+  float: left;
+  margin: 4%;
+  font-weight: bold;
+  font-size: 120%;
+  width: 92%;
+  text-align: center;
+}
+div.pokemon-container {
+  display: inline-block;
+  float: left;
+  width: 46%;
+  margin: 2%;
+  background-color: greenyellow;
+  color: darkcyan;
+  border-radius: 10px;
+  min-width: 140px;
+  &:hover {
+    background-color: #00ce00;
+    cursor: pointer;
+  }
+  &.selected {
+    background-color: #00ce00;
+    box-shadow: 0 0 11px 5px gold;
+    color: aliceblue;
+  }
+}
+h1 {
+  color: gold;
+  font-size: 200%;
+  margin: 0 0 10px 0;
+}
+div.scroll-bar {
+  display: block;
+  float: left;
+  background-color: #7fffd47a;
+  height: 600px;
+  border-radius: 10px;
+}

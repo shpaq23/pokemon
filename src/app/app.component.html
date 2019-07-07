@@ -1,8 +1,5 @@
-<h1>Pokemon</h1>
-<div class="container">
-  <mat-radio-group aria-label="Change Theme" (change)="changeTheme($event)" [value]="theme">
-    <mat-radio-button [value]="'bright'">Dark Theme</mat-radio-button>
-    <mat-radio-button [value]="'dark'">Bright Theme</mat-radio-button>
-  </mat-radio-group>
+<img src="../assets/pokemonTitle.png" class="title" alt="title">
+<div class="content">
+  <app-pokemon-list></app-pokemon-list>
+  <app-pokemon-details></app-pokemon-details>
 </div>
-<router-outlet></router-outlet>

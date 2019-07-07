@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<div class="scroll-bar">
+  <ng-scrollbar shown="always">
+    <div (click)="selectedPokemonName !== pokemon.name && selectPokemon(pokemon.name)" class="pokemon-container" *ngFor="let pokemon of pokemons$ | async"
+         [class.selected]="selectedPokemonName === pokemon.name">
+      <div class="title">{{pokemon.name | titlecase}}</div>
+    </div>
+  </ng-scrollbar>
+</div>

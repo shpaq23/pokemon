@@ -1,0 +1,54 @@
+:host {
+  width: 48%;
+  display: inline;
+  float: right;
+  margin: 1%;
+}
+h1 {
+  color: gold;
+  font-size: 200%;
+  margin: 0 0 10px 0;
+}
+h3 {
+  text-align: center;
+  font-size: 150%;
+  color: gold;
+}
+h4 {
+  margin: 0;
+  color: #adff2f;
+}
+div.pokemon-details {
+  display: block;
+  float: right;
+  background-color: #7fffd47a;
+  height: 600px;
+  width: 100%;
+  border-radius: 10px;
+}
+div.box {
+  width: 42%;
+  margin: 4%;
+  display: inline;
+  float: left;
+  text-align: left;
+  background-color: rgba(0, 128, 0, 0.73);
+  border-radius: 10px;
+  &.full {
+    width: 92%;
+    text-align: center;
+  }
+}
+p {
+  margin: 10px;
+  font-weight: bold;
+  color: #adff2f;
+}
+span {
+  color: aliceblue;
+}
+div.img-box {
+  display: inline;
+  float: left;
+  width: 50%;
+}
