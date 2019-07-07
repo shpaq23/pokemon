@@ -39,4 +39,7 @@ export class PokemonDetailsComponent implements OnInit {
   isPokemonBasic(pokemon: PokemonDetailed | PokemonBasic | null): pokemon is PokemonBasic {
     return pokemon === null ? false : (pokemon as PokemonBasic).url !== undefined;
   }
+  isPokemonDetailed(pokemon: PokemonDetailed | PokemonBasic | null): pokemon is PokemonDetailed {
+    return pokemon === null ? false : (pokemon as PokemonDetailed).stats !== undefined;
+  }
 }

@@ -1,4 +1,4 @@
-<ng-container *ngIf="selectedPokemon">
+<ng-container *ngIf="isPokemonDetailed(selectedPokemon)">
   <h1>{{selectedPokemon.name | titlecase}} Details</h1>
   <div class="pokemon-details">
     <div class="box">
